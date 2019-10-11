@@ -1,0 +1,104 @@
+/*
+Colors to use:
+dark blue: #06365f
+light blue: #1c5380
+*/
+
+body {
+    font: 200 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    background-color: white;    
+}
+
+.footerLinks {
+    color: steelblue;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 3em;
+}  
+
+.store {
+      padding-right: 3em;
+      padding-top: 1em;
+}
+
+#buttonText {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    word-spacing: 0.5em;  
+    padding: 0em 0em 0em 0em;
+    margin-top: -3em;
+    margin-right: 0.5em;
+    text-align: right;     
+}
+
+#camera {
+    margin-left: 33em;
+    margin-top: 9em;    
+    position: absolute;
+}
+
+#caption {
+    background-color: white;
+    height: 24em;
+    width: 29em;
+    padding-left: 3em;
+    padding-right: 3em;
+    margin-left: 33.5em;
+    margin-top: -4em;
+    border: 1px solid grey;     
+    border-radius: 10px;    
+    border-image: linear-gradient(grey 0%, lightgrey 25%, white 65%) 1;   
+    
+}    
+
+#captionTop {
+    color: midnightblue;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#cellphones {
+    margin-left: 10em;
+    margin-top: 8em;
+    margin-bottom: 20em;
+    position: absolute;
+}    
+    
+#footer {
+    margin-top: -5em;
+    text-align: center;
+    font-size: 12px;
+    padding-top: 20em; 
+    font-weight: 400;
+    color: gray;     
+} 
+
+#header {
+    height: 20em;
+    width: 100em;
+    background-color: steelblue;
+} 
+
+#home {
+    padding: 0em 1em 2em 0em;
+    margin-left: -5em;
+}
+
+#login {
+    height: 4em;
+    width: 10em;  
+    margin-left: 89.5em;
+    margin-top: 15em;        
+    position: absolute;
+    background-color: steelblue;    
+    border: 1px solid midnightblue;
+    border-radius: 3px;
+}
+
+
+
+
+
+    
