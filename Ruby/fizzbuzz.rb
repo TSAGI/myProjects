@@ -1,15 +1,14 @@
 loop do
     print "Please enter a number: "
-    fTemp = gets.chomp
-    testNum = fTemp
+    number = gets.chomp    
     begin
-      if Integer(testNum)      
-        fTemp = fTemp.to_f        
-        if fTemp % 3 == 0 && fTemp % 5 == 0 then
+      if Integer(number) then   
+        number = number.to_f        
+        if number % 3 == 0 && number % 5 == 0 then
             puts "FIZZBUZZ"
-        elsif fTemp % 3 == 0 
+        elsif number % 3 == 0 
             puts "FIZZ"
-        elsif fTemp % 5 == 0 then
+        elsif number % 5 == 0 then
             puts "BUZZ"
         else
             puts "Sorry...no FIZZ or BUZZ for you."
