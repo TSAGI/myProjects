@@ -7,9 +7,8 @@ while msg.nil? || msg.strip.empty?
     msg = gets.chomp
 end
 
-if msg.reverse == msg || msg.strip.reverse == msg.strip then
+if msg.reverse == msg || msg.delete(" ").reverse == msg.delete(" ") then
     puts  "#{msg.capitalize} is a palindrome.\n"
 else
     puts msg.capitalize
 end
-
