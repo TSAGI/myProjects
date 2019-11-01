@@ -1,15 +1,15 @@
-# print "enter a number: "
-# num1 = gets.chomp
-# print "enter another number: "
-# num2 = gets.chomp
-# if num1 > num2 
-#     puts "#{num1} is greater than #{num2}" 
-# else
-#     puts "#{num2} is greater than #{num1}"
-# end
 
-char a = 'r'
-print a
+print "Please type in a message or word: "
+msg = gets.chomp
+while msg.nil? || msg.strip.empty?
+    print "You didn't type a message or a word. Try again.\n"
+    print "Please typs in a message or word: "
+    msg = gets.chomp
+end
 
-
+if msg.reverse == msg || msg.strip.reverse == msg.strip then
+    puts  "#{msg.capitalize} is a palindrome.\n"
+else
+    puts msg.capitalize
+end
 
