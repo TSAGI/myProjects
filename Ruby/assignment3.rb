@@ -1,5 +1,5 @@
 def hello
-    puts "Hello"
+    return "Hello"
 end
 
 def divide(value1, value2)    
