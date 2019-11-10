@@ -1,3 +1,4 @@
+def inventory
 print "How many items do you want to input?: "
 number_of_items = gets.chomp.to_i
 
@@ -19,4 +20,5 @@ end
 items.each do |key, val|
     puts "#{key}: #{val}" 
 end
-
+end
+inventory
