@@ -13,4 +13,3 @@ def fib(n)
     puts fib_array[n]
 end
 
-fib(6)
