@@ -23,27 +23,26 @@ for x in 1..class_size
         score = gets.chomp    
         check_int = score.to_i 
     end
-    score = score.to_i               
-        if score > 89 && score < 101 then
-            grade = "A+"
-        elsif score > 79 && score < 90 then
-             grade = "A"
-        elsif score > 69 && score < 80 then            
-             grade = "B"            
-        elsif score > 59 && score < 70 then            
-            grade = "C"            
-        elsif score > 49 && score < 60 then
-            grade = "D"
-        elsif score >= 0  && score < 50 then
-             grade = "F"      
-         end    
-        
+    score = score.to_i   
+
+    if score > 89 && score < 101 then
+       grade = "A+"
+    elsif score > 79 && score < 90 then
+       grade = "A"
+    elsif score > 69 && score < 80 then            
+       grade = "B"            
+    elsif score > 59 && score < 70 then            
+       grade = "C"            
+    elsif score > 49 && score < 60 then
+       grade = "D"
+    elsif score >= 0  && score < 50 then
+       grade = "F"      
+    end            
     
     students[name] = grade
 end
 
 studens = students.to_a.sort.to_h
-
 students.each do |key, value|
     puts "#{key}: #{value}"
 end
