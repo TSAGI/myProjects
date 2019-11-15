@@ -42,7 +42,7 @@ for x in 1..class_size
     students[name] = grade
 end
 
-studens = students.to_a.sort.to_h
+students = students.to_a.sort.to_h
 students.each do |key, value|
     puts "#{key}: #{value}"
 end
