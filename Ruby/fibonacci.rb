@@ -10,6 +10,6 @@ def fib(n)
     fib_array.push(a,b)    
     end
 
-    return fib_array[n]
+    return fib_array[n-1]
 end
 
