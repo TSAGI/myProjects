@@ -1,10 +1,12 @@
 print "What was the student's score?: "
 score = gets.chomp
+check_int = score.to_i
 
-while score =~ /[^0-9]+/
+while score =~ /[^0-9]+/ || check_int > 100    
     puts "The score must be an integer between 0 and 100. Try again."
     print "What was the students score?: "
-    score = gets.chomp
+    score = gets.chomp    
+    check_int = score.to_i
     if score =~ /^[0-9]+$/ then
         score = score.to_i
         if score > 89 && score < 101 then
@@ -18,9 +20,7 @@ while score =~ /[^0-9]+/
         elsif score > 49 && score < 60 then
             puts "The student got a D. Needs to study more."
         elsif score >= 0  && score < 50 then
-            puts "The student failed. I'm sorry."
-        elsif score < 0 || score > 100 then
-            score = "apple"
+            puts "The student failed. I'm sorry."        
         end    
     end
 end
