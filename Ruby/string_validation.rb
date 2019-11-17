@@ -5,8 +5,8 @@
 def validStr(s)
     string = s.split("")
    
-    ob = 0
-    cb = 0
+    ob = 0      #opening bracket
+    cb = 0      #closing bracket
     for x in string do
         if x == "]"
             cb += 1
