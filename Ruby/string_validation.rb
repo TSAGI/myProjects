@@ -7,22 +7,24 @@ def validStr(s)
    
     ob = 0      #opening bracket
     cb = 0      #closing bracket
+    
     for x in string do
+    if ob >= cb 
         if x == "]"
             cb += 1
         elsif x == "["
             ob += 1
-        end
-        if cb > ob
-            break
-        end
+        end           
     end
-
+    end
+    
     if (ob + cb) % 2 != 0 then
         return "INVALID STRING"
     else
         return "VALID STRING"
     end
+
 end 
+
 
 
