@@ -28,13 +28,25 @@ class Animal
     def setName(name)
         @name = name 
     end
+
+    def speak
+        print "What noise does #{@name} make?: "
+        spk = gets.chomp
+        puts
+        puts "#{@name} says #{spk}!!\n\n"
+    end
 end
 
 class Person
-    def initialize(gender, age, height)
+    def initialize(name, gender, age, height)
+        @name = name
         @gender = gender
         @age = age
         @height = height
+    end
+
+    def getName
+        return @name
     end
 
     def getGender
@@ -49,6 +61,10 @@ class Person
         return @height 
     end
 
+    def setName(name)
+        @name = name
+    end
+
     def setGender(gender)
         @gender = gender
     end
@@ -59,6 +75,13 @@ class Person
 
     def setHeight(height)
         @height = height 
+    end
+
+    def claimToFaim
+        print "What is #{@name} famous for?: "
+        claimToFaim = gets.chomp
+        puts
+        return claimToFaim
     end
 end
 
@@ -95,20 +118,25 @@ class Building
 end
 
 tiger = Animal.new("male", 12, "Tigger")
-shaw = Person.new("male", 37, "6\'7\"")
+tiger.speak
+shaw = Person.new("Brian Shaw", "male", 37, "6\'7\"")
 skyscraper = Building.new("1453 feet", 88, "Empire State Building")
 
 print "#{tiger.getName} is a #{tiger.getAge} year old #{tiger.getGender}.\n\n"
-print "The world's strongest person is a #{shaw.getHeight} tall, #{shaw.getAge} year old #{shaw.getGender}.\n\n"
+print "#{shaw.getName} is a #{shaw.getHeight} tall, #{shaw.getAge} year old #{shaw.getGender}.\n
+#{shaw.getName} is famous for being #{shaw.claimToFaim}\n\n"
 print "The #{skyscraper.getName} is #{skyscraper.getSize} tall, and is #{skyscraper.getAge} years old.\n\n"
 tiger.setName("Tigress")
+tiger.speak
 tiger.setGender("female")
 tiger.setAge("16")
-shaw.setHeight("10\'4")
-shaw.setAge(240)
+shaw.setName("Carol Shaw")
+shaw.setHeight("5\'4\"")
+shaw.setAge(64)
 shaw.setGender("female")
 skyscraper.setAge("90")
 skyscraper.setSize(1046)
 print "#{tiger.getName} is a #{tiger.getAge} year old #{tiger.getGender}.\n\n"
-print "The world's strongest person is a #{shaw.getHeight} tall, #{shaw.getAge} year old #{shaw.getGender}.\n\n"
+print "#{shaw.getName} is a #{shaw.getHeight} tall, #{shaw.getAge} year old #{shaw.getGender}.\n
+#{shaw.getName} is famous for being #{shaw.claimToFaim}\n\n"
 print "The #{skyscraper.getName} is #{skyscraper.getSize} tall, and is #{skyscraper.getAge} years old.\n"
