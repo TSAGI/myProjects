@@ -53,7 +53,7 @@ def diamond(lines)
 end
 diamond(num)
 
-def asterix(lines)
+def hourglass(lines)
     spaces = 1
     (lines*2).downto(1) do |i|
         if i % 2 != 0 then  
@@ -74,4 +74,4 @@ def asterix(lines)
     end
 
 end
-asterix(num)
+hourglass(num)
