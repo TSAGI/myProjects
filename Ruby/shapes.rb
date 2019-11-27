@@ -1,4 +1,4 @@
-print "How many lines are in your rectangle?: "
+print "How many lines are in your shape?: "
 num = gets.chomp.to_i
 def rectangle(lines)
 for i in 1..lines    
