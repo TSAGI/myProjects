@@ -72,6 +72,5 @@ def hourglass(lines)
             spaces -= 1
         end      
     end
-
 end
 hourglass(num)
