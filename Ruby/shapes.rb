@@ -19,7 +19,7 @@ end
 halfPyramid(num)
 
 def pyramid(lines)       
-    spaces = lines    
+    spaces = lines - 1   
     for i in 1..lines*2
         if i % 2 != 0 then  
             print " " * spaces  
@@ -32,7 +32,7 @@ end
 pyramid(num)
 
 def diamond(lines)
-    spaces = lines    
+    spaces = lines - 1   
     for i in 1..lines*2
         if i % 2 != 0 then  
             print " " * spaces  
@@ -41,7 +41,7 @@ def diamond(lines)
             spaces -= 1
         end      
     end
-    spaces = 2
+    spaces = 1
     ((lines-1)*2).downto(1) do |i|
         if i % 2 != 0 then  
             print " " * spaces  
@@ -54,7 +54,7 @@ end
 diamond(num)
 
 def hourglass(lines)
-    spaces = 1
+    spaces = 0
     (lines*2).downto(1) do |i|
         if i % 2 != 0 then  
             print " " * spaces  
@@ -63,7 +63,7 @@ def hourglass(lines)
             spaces += 1
         end      
     end
-    spaces = lines
+    spaces = lines - 1
     for i in 1..lines*2
         if i % 2 != 0 then  
             print " " * spaces  
