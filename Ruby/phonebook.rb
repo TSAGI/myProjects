@@ -14,6 +14,6 @@ phonebook[3] = ["310-663-2800", "310-881-9427", "310-222-5400"]
 
 for arr in phonebook do
     for num in arr do
-        puts num 
+        print "#{num}\n"
     end
 end
