@@ -17,7 +17,7 @@ until tic_tac_toe
     row[row_number][column_number] = "X"
     puts
 
-    if row[1].count("X") == 3 || row[1].count("X") == 3 || row[1].count("X") == 3
+    if row[1].count("X") == 3 || row[2].count("X") == 3 || row[3].count("X") == 3
        tic_tac_toe = true
     end 
     if row[1][1] == "X" && row[2][1] == "X" && row[3][1] == "X"
