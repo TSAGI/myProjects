@@ -1,3 +1,5 @@
+require 'io/console'
+
 deck = {
     "Clubs" => [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
     "Spades" => [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
@@ -12,6 +14,11 @@ royalty = {
 }
 player1_rounds_won = 0
 player2_rounds_won = 0
+
+puts "\nWELOME TO THE GAME OF WAR."
+puts "Press any key to begin..."
+STDIN.getch
+puts
 
 until deck.empty?
     #PLAYER 1 CARD THIS ROUND
@@ -47,12 +54,11 @@ until deck.empty?
         player2_rounds_won += 1
         puts "Your opponent is the winner of this round."
     else
-        puts "This round is a tie."
+        puts "This round is a draw."
     end
-    puts
-    # puts "Press <enter> to continue or <q> then <enter> to quit..."
-    # a = gets.chomp  
-    # if a.downcase == "q" then break end         
+    
+    puts "\nPress any key to continue...\n\n"
+    STDIN.getch        
 end
 
 #   FINAL RESULTS
