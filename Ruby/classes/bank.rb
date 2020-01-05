@@ -7,10 +7,6 @@ class BankAccount
         @balance = 0        
     end
 
-    def get_id
-        @id
-    end
-
     def get_balance
         "$%.2f" % @balance
     end

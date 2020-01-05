@@ -19,7 +19,7 @@ class Branch
     end
     
     def get_accounts
-        @accounts.each {|account| puts account.get_id}
+        @accounts.each {|account| puts account.id}
     end
     
 end
@@ -33,4 +33,4 @@ rbc01.add_account(savings)
 rbc01.get_accounts
 rbc01.deposit(savings, 500)
 puts savings.get_balance
-puts savings.balance
+
