@@ -7,5 +7,3 @@ class Item
     attr_reader :description
 end
 
-# hammer = Item.new("This is a strong hammer")
-# puts hammer.description
