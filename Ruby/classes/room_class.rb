@@ -13,31 +13,13 @@
 # Exercise 1: Create a class called Room that has the attributes
 # described above: exits, description, roomID/Name
 class Room
+
+    attr_accessor :room_name, :description, :exits
     def initialize(room_name, description)
         @room_name = room_name
         @description = description
         @exits = {}        
-    end
-    
-    def get_room_name
-        @room_name
-    end
-    
-    def set_room_name(new_room_name)
-        @room_name = new_room_type
-    end
-
-    def get_description
-        @description
-    end
-
-    def set_description(new_description)
-        @description = new_description
-    end
-    
-    def get_exits
-        @exits
-    end
+    end     
 
     def set_exits(nExit, eExit, sExit, wExit)
         @exits = {
@@ -48,14 +30,6 @@ class Room
         }
     end
 
-    def get_items
-        @items
-    end
-
-    def set_items(new_items)
-        @items = new_items
-    end
-
 end
 
 class Person
@@ -64,14 +38,13 @@ class Person
     end
 
     def go(exit)
-       if @current_room.get_exits[exit] != nil       
-       @current_room = @current_room.get_exits[exit]
+       if @current_room.exits[exit] != nil       
+       @current_room = @current_room.exits[exit]
        end
     end
 
-    def get_room
-        @current_room
-    end
+    attr_reader :current_room
+    
 end
 # Exercise 2: Create an object called classroom using your
 # Room class. The classroom needs 1 exit, a description and
@@ -84,8 +57,8 @@ classroom.set_exits(nil, nil, outside, nil)
 outside.set_exits(classroom, nil, nil, nil)
 
 person = Person.new(classroom)
-puts person.get_room.get_room_name
+puts person.current_room.room_name
 person.go("south")
-puts person.get_room.get_room_name
+puts person.current_room.room_name
 person.go("north")
-puts person.get_room.get_room_name
+puts person.current_room.room_name
