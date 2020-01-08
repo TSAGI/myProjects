@@ -11,13 +11,13 @@ class Character
     end
 
     def getItems
-        @stuff.each {|item| puts item.description}
+        @stuff.each {|item| puts "#{item.name}: #{item.description}"}
     end
     
 end
 
-hammer = Item.new("This is a strong hammer")
-bow = Item.new("Flexible and agile")
+hammer = Item.new("Hammer", "This is a strong hammer")
+bow = Item.new("Bow", "Flexible and agile")
 bob = Character.new()
 bob.addItem(hammer)
 bob.addItem(bow)

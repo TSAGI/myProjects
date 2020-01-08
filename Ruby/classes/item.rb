@@ -1,9 +1,10 @@
 class Item
 
-    def initialize(desc)
+    def initialize(name, desc)
+        @name = name
         @description = desc
     end
 
-    attr_reader :description
+    attr_reader :description, :name
 end
 
