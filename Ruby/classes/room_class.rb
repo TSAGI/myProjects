@@ -50,15 +50,4 @@ end
 # Room class. The classroom needs 1 exit, a description and
 # roomID (or name) called "classroom"
 
-classroom = Room.new("Classroom", "An empty classroom")
-outside = Room.new("Outside", "The great outdoors")
-
-classroom.set_exits(nil, nil, outside, nil)
-outside.set_exits(classroom, nil, nil, nil)
-
-person = Person.new(classroom)
-puts person.current_room.room_name
-person.go("south")
-puts person.current_room.room_name
-person.go("north")
-puts person.current_room.room_name
+#SEE CHARACTER CLASS
